@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width" />
+<link rel="stylesheet" href="style.css">
+
+<title> 給与計算</title>
+
+
+</head>
+<body>
+
+<!-- START Header Area -->
+<header>
+    <h1>給料を一括計算</h1>
+</header>
+<!-- END Header Area -->
+
+<!-- START Main Area -->
+<main>
+    <p>給料： <span id="span2"></span></p>
+    <a>時給(円)を入力してください<br>
+        <label> 時給１:<input type="number" id="pay1"></label><br>
+        <label> 時給２:<input type="number" id="pay2"></label><br>
+        <label> 時給３:<input type="number" id="pay3"></label><br>
+    </a>
+    <b>勤務時間(分)を入力してください<br>
+        <label>勤務時間１：<input type="number" id ="time1"></label><br>
+        <label>勤務時間２：<input type="number" id ="time2"></label><br>
+        <label>勤務時間３：<input type="number" id ="time3"></label><br>
+
+    </b>
+    <input type="button" value="計算" onclick="clickBtn3()" />
+    <script>
+        function clickBtn3(){
+            var pay1 = document.getElementById("pay1")
+            var pay2 = document.getElementById("pay2")
+            var pay3 = document.getElementById("pay3")
+            var time1 = document.getElementById("time1")
+            var time2 = document.getElementById("time2")
+            var time3 = document.getElementById("time3")
+
+            var pay1 = pay1 / 60
+            var pay2 = pay2 / 60
+            var pay3 = pay3 / 60
+
+            var salary1 = pay1 * time1
+            var salary2 = pay2 * time2
+            var salary3 = pay3 * time3
+
+            var total_salary = salary1 + salary2 + salary3
+
+            document.getElementById("span2").textContent = total_salary;
+        }
+    </script>
+</main>
+<!-- END Main Area -->
+
+<!-- START Footer Area -->
+<footer></footer>
+<!-- END Footer Area -->
+
+
+
+
+</body>
+</html>
