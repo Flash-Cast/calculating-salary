@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* ここから追記 */
+/* ボディー */
+body {
+    font-size: 18px;
+    margin: 0;
+    }
+    /* ヘッダー */
+    .header {
+    background: #2a5c84;
+    color: white;
+    text-align: center;
+    padding: 100px 5px;
+    }
+    .header a {
+    color: white;
+    padding: 5px 10px;
+    margin: 0 3px;
+    border: solid 1px white;
+    border-radius: 10px;
+    transition: all .5s;
+    }
+    .header a:hover {
+    background: white;
+    color: #2a5c84;
+    }

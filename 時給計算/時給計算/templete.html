@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width" />
+<link rel="stylesheet" href="style.css">
+
+<title> 給与計算</title>
+
+
+</head>
+<body>
+
+<!-- START Header Area -->
+<header>
+    <h1>給料を一括計算</h1>
+</header>
+<!-- END Header Area -->
+
+<!-- START Main Area -->
+<main>
+    <p>給料： <span id="span2"></span></p>
+    <a>時給(円)を入力してください<br>
+        <label> 時給１:<input type="number" id="pay1"></label><br>
+        <label> 時給２:<input type="number" id="pay2"></label><br>
+        <label> 時給３:<input type="number" id="pay3"></label><br>
+    </a>
+    <b>勤務時間(分)を入力してください<br>
+        <label>勤務時間１：<input type="number" id ="time1"></label><br>
+        <label>勤務時間２：<input type="number" id ="time2"></label><br>
+        <label>勤務時間３：<input type="number" id ="time3"></label><br>
+
+    </b>
+    <input type="button" value="計算" onclick="clickBtn3()" />
+    <script>
+        function clickBtn3() {
+            var pay1 = parseFloat(document.getElementById("pay1").value) || 0;
+            var pay2 = parseFloat(document.getElementById("pay2").value) || 0;
+            var pay3 = parseFloat(document.getElementById("pay3").value) || 0;
+            var time1 = parseFloat(document.getElementById("time1").value) || 0;
+            var time2 = parseFloat(document.getElementById("time2").value) || 0;
+            var time3 = parseFloat(document.getElementById("time3").value) || 0;
+
+            var hourlyPay1 = pay1 / 60;
+            var hourlyPay2 = pay2 / 60;
+            var hourlyPay3 = pay3 / 60;
+
+            var salary1 = hourlyPay1 * time1;
+            var salary2 = hourlyPay2 * time2;
+            var salary3 = hourlyPay3 * time3;
+
+            var total_salary = salary1 + salary2 + salary3;
+
+        document.getElementById("span2").textContent = total_salary.toFixed(2);
+        }
+
+    </script>
+</main>
+<!-- END Main Area -->
+
+<!-- START Footer Area -->
+<footer></footer>
+<!-- END Footer Area -->
+
+
+
+
+</body>
+</html>
