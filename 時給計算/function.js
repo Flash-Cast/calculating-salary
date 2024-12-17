@@ -16,5 +16,8 @@ function clickBtn3() {
 
     var total_salary = salary1 + salary2 + salary3;
 
-document.getElementById("span2").textContent = total_salary.toFixed(0);
+document.getElementById("span1").textContent = total_salary.toFixed(0);
+document.getElementById("span2").textContent = salary1.toFixed(0);
+document.getElementById("span3").textContent = salary2.toFixed(0);
+document.getElementById("span4").textContent = salary3.toFixed(0);
 }

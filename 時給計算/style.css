@@ -17,6 +17,12 @@ body {
             text-align: center;
             color: black;
         }
+        h3{
+            font-size: 20px;
+            text-align: center;
+            color: black;
+            font-weight: bold;
+        }
         p{
             font-size: 25px;
             text-align: center;
