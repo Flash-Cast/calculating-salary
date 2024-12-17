@@ -1,26 +1,47 @@
 @charset "UTF-8";
 /* ここから追記 */
+
 /* ボディー */
 body {
-    font-size: 18px;
-    margin: 0;
+        background-color: #bcf2e8;
+               
+    header{
+        h1{color:black;
+            font-size: 35px;
+            text-align: center;
+        }
     }
-    /* ヘッダー */
-    .header {
-    background: #2a5c84;
-    color: white;
-    text-align: center;
-    padding: 100px 5px;
+    main{
+        h2{
+            font-size: 30px;
+            text-align: center;
+            color: black;
+        }
+        p{
+            font-size: 25px;
+            text-align: center;
+            color: black;
+            font-weight: bold;
+        }
+        .button {
+            display: inline-block;
+            font-weight: bold;
+            font-size: 20px;
+            width: 150px;
+            line-height: 60px;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            background-color: wheat;
+            box-shadow: 0px 5px 0px gray;
+            transition: .3s;
+            outline: black;
+            display: block;
+            margin: 0 auto;
+        }
+        .button:hover {
+            box-shadow: unset;
+            transform: translateY(4px);
+        }
     }
-    .header a {
-    color: white;
-    padding: 5px 10px;
-    margin: 0 3px;
-    border: solid 1px white;
-    border-radius: 10px;
-    transition: all .5s;
-    }
-    .header a:hover {
-    background: white;
-    color: #2a5c84;
-    }
+}

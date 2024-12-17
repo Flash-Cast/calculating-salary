@@ -19,50 +19,27 @@
 
 <!-- START Main Area -->
 <main>
-    <p>給料： <span id="span2"></span></p>
-    <a>時給(円)を入力してください<br>
-        <label> 時給１:<input type="number" id="pay1"></label><br>
-        <label> 時給２:<input type="number" id="pay2"></label><br>
-        <label> 時給３:<input type="number" id="pay3"></label><br>
-    </a>
-    <b>勤務時間(分)を入力してください<br>
-        <label>勤務時間１：<input type="number" id ="time1"></label><br>
-        <label>勤務時間２：<input type="number" id ="time2"></label><br>
-        <label>勤務時間３：<input type="number" id ="time3"></label><br>
+    <h2>給料： <span id="span2"></span>円</h2>
+    <p>時給(円)を入力してください<br>
+        <label> 時給１:<input type="number" id="pay1">円</label><br>
+        <label> 時給２:<input type="number" id="pay2">円</label><br>
+        <label> 時給３:<input type="number" id="pay3">円</label><br>
+        <br>
+        勤務時間(分)を入力してください<br>
+        <label>勤務時間１：<input type="number" id ="time1">分</label><br>
+        <label>勤務時間２：<input type="number" id ="time2">分</label><br>
+        <label>勤務時間３：<input type="number" id ="time3">分</label><br>
 
-    </b>
-    <input type="button" value="計算" onclick="clickBtn3()" />
-    <script>
-        function clickBtn3(){
-            var pay1 = document.getElementById("pay1")
-            var pay2 = document.getElementById("pay2")
-            var pay3 = document.getElementById("pay3")
-            var time1 = document.getElementById("time1")
-            var time2 = document.getElementById("time2")
-            var time3 = document.getElementById("time3")
-
-            var pay1 = pay1 / 60
-            var pay2 = pay2 / 60
-            var pay3 = pay3 / 60
-
-            var salary1 = pay1 * time1
-            var salary2 = pay2 * time2
-            var salary3 = pay3 * time3
-
-            var total_salary = salary1 + salary2 + salary3
-
-            document.getElementById("span2").textContent = total_salary;
-        }
-    </script>
+    </p>
+    <br>
+    <button class="button" onclick="clickBtn3()">計算</button>
+    <script src="function.js"></script>
 </main>
 <!-- END Main Area -->
 
 <!-- START Footer Area -->
 <footer></footer>
 <!-- END Footer Area -->
-
-
-
 
 </body>
 </html>
