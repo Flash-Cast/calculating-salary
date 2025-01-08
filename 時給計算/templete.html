@@ -34,6 +34,32 @@
     </p>
     <br>
     <button class="button" onclick="clickBtn3()">計算</button>
+    
+
+    <div id="calculator">
+        <div id="calculator-header">電卓</div>
+        <input type="text" id="display" name="display">
+        <button onclick="inputNumber('1')">1</button>
+        <button onclick="inputNumber('2')">2</button>
+        <button onclick="inputNumber('3')">3</button>
+        <button onclick="inputOperator('+')">+</button>
+        <button onclick="inputNumber('4')">4</button>
+        <button onclick="inputNumber('5')">5</button>
+        <button onclick="inputNumber('6')">6</button>
+        <button onclick="inputOperator('-')">-</button>
+        <button onclick="inputNumber('7')">7</button>
+        <button onclick="inputNumber('8')">8</button>
+        <button onclick="inputNumber('9')">9</button>
+        <button onclick="inputOperator('*')">*</button>
+        <button onclick="inputNumber('0')">0</button>
+        <button onclick="clearDisplay()">C</button>
+        <button type="button" onclick="calculateResult()">=</button>
+        <button onclick="inputOperator('/')">/</button>
+        <button type="button" onclick="outputResult()">出力</button>
+    </div>
+    
+    <div id="result">計算結果: <span id="calculation-result"></span></div>
+
     <script src="function.js"></script>
 </main>
 <!-- END Main Area -->

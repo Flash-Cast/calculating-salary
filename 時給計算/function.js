@@ -21,3 +21,66 @@ document.getElementById("span2").textContent = salary1.toFixed(0);
 document.getElementById("span3").textContent = salary2.toFixed(0);
 document.getElementById("span4").textContent = salary3.toFixed(0);
 }
+
+
+function inputNumber(number) {
+    var display = document.getElementById('display');
+    display.value += number;
+}
+
+function inputOperator(operator) {
+    var display = document.getElementById('display');
+    display.value += operator;
+}
+
+function calculateResult() {
+    var display = document.getElementById('display');
+    try {
+        display.value = eval(display.value); 
+    } catch (e) {
+        display.value = 'エラー'; 
+    }
+}
+
+function outputResult() {
+    var display = document.getElementById('display').value;
+    var resultElement = document.getElementById('calculation-result');
+    try {
+        var result = eval(display);
+        resultElement.innerText = result; 
+    } catch (e) {
+        resultElement.innerText = 'エラー'; 
+    }
+}
+
+function clearDisplay() {
+    var display = document.getElementById('display');
+    display.value = '';
+    document.getElementById('calculation-result').innerText = ''; 
+}
+
+ // ドラッグ可能にするJavaScriptコード
+ const calculator = document.getElementById('calculator');
+ const header = document.getElementById('calculator-header');
+
+ let offsetX = 0;
+ let offsetY = 0;
+ let isDragging = false;
+
+ header.addEventListener('mousedown', (e) => {
+     isDragging = true;
+     offsetX = e.clientX - calculator.offsetLeft;
+     offsetY = e.clientY - calculator.offsetTop;
+ });
+
+ document.addEventListener('mousemove', (e) => {
+     if (isDragging) {
+         calculator.style.left = `${e.clientX - offsetX}px`;
+         calculator.style.top = `${e.clientY - offsetY}px`;
+     }
+ });
+
+ document.addEventListener('mouseup', () => {
+     isDragging = false;
+ });
+ 
