@@ -19,46 +19,46 @@
 
 <!-- START Main Area -->
 <main>
-    <h2>給料： <span id="span1"></span>円</h2><br>
-    <h3>１の給料：<span id="span2"></span>円,２の給料：<span id="span3"></span>円,３の給料：<span id="span4"></span>円</h3>
-    <p>時給(円)を入力してください<br>
-        <label> 時給１:<input type="number" id="pay1">円</label><br>
-        <label> 時給２:<input type="number" id="pay2">円</label><br>
-        <label> 時給３:<input type="number" id="pay3">円</label><br>
-        <br>
-        勤務時間(分)を入力してください<br>
-        <label>勤務時間１：<input type="number" id ="time1">分</label><br>
-        <label>勤務時間２：<input type="number" id ="time2">分</label><br>
-        <label>勤務時間３：<input type="number" id ="time3">分</label><br>
+    <div id = "salary_cal">
+        <h2>給料： <span id="span1"></span>円</h2><br>
+        <h3>１の給料：<span id="span2"></span>円,２の給料：<span id="span3"></span>円,３の給料：<span id="span4"></span>円</h3>
+        <p>時給(円)を入力してください<br>
+            <label> 時給１:<input type="number" id="pay1">円</label><br>
+            <label> 時給２:<input type="number" id="pay2">円</label><br>
+            <label> 時給３:<input type="number" id="pay3">円</label><br>
+            <br>
+            勤務時間(分)を入力してください<br>
+            <label>勤務時間１：<input type="number" id ="time1">分</label><br>
+            <label>勤務時間２：<input type="number" id ="time2">分</label><br>
+            <label>勤務時間３：<input type="number" id ="time3">分</label><br>
 
-    </p>
-    <br>
-    <button class="button" onclick="clickBtn3()">計算</button>
-    
+        </p>
+        <br>
+        <button id="cal_button" onclick="clickBtn3()">計算</button>
+    </div>
 
     <div id="calculator">
         <div id="calculator-header">電卓</div>
         <input type="text" id="display" name="display">
-        <button onclick="inputNumber('1')">1</button>
-        <button onclick="inputNumber('2')">2</button>
-        <button onclick="inputNumber('3')">3</button>
-        <button onclick="inputOperator('+')">+</button>
-        <button onclick="inputNumber('4')">4</button>
-        <button onclick="inputNumber('5')">5</button>
-        <button onclick="inputNumber('6')">6</button>
-        <button onclick="inputOperator('-')">-</button>
-        <button onclick="inputNumber('7')">7</button>
-        <button onclick="inputNumber('8')">8</button>
-        <button onclick="inputNumber('9')">9</button>
-        <button onclick="inputOperator('*')">*</button>
-        <button onclick="inputNumber('0')">0</button>
-        <button onclick="clearDisplay()">C</button>
-        <button type="button" onclick="calculateResult()">=</button>
-        <button onclick="inputOperator('/')">/</button>
-        <button type="button" onclick="outputResult()">出力</button>
+        <button class="element_button" onclick="inputNumber('1')">1</button>
+        <button class="element_button" onclick="inputNumber('2')">2</button>
+        <button class="element_button" onclick="inputNumber('3')">3</button>
+        <button class="element_button" onclick="inputNumber('4')">4</button>
+        <button class="element_button" onclick="inputNumber('5')">5</button>
+        <button class="element_button" onclick="inputNumber('6')">6</button>
+        <button class="element_button" onclick="inputNumber('7')">7</button>
+        <button class="element_button" onclick="inputNumber('8')">8</button>
+        <button class="element_button" onclick="inputNumber('9')">9</button>
+        <button class="element_button" onclick="inputNumber('0')">0</button>
+        <button class="element_button" onclick="inputOperator('+')">+</button>
+        <button class="element_button" onclick="inputOperator('-')">-</button>
+        <button class="element_button" onclick="inputOperator('*')">×</button>
+        <button class="element_button" onclick="inputOperator('/')">÷</button>
+        <button class="element_button" type="button" onclick="calculateResult()">=</button>
+        <button class="element_button" type="button" onclick="outputResult()">出力</button>
+        <button class="element_button" onclick="clearDisplay()">C</button>
     </div>
     
-    <div id="result">計算結果: <span id="calculation-result"></span></div>
 
     <script src="function.js"></script>
 </main>

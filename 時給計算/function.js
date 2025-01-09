@@ -1,3 +1,4 @@
+//給料計算部分
 function clickBtn3() {
     var pay1 = parseFloat(document.getElementById("pay1").value) || 0;
     var pay2 = parseFloat(document.getElementById("pay2").value) || 0;
@@ -22,7 +23,7 @@ document.getElementById("span3").textContent = salary2.toFixed(0);
 document.getElementById("span4").textContent = salary3.toFixed(0);
 }
 
-
+//電卓部分
 function inputNumber(number) {
     var display = document.getElementById('display');
     display.value += number;
@@ -61,26 +62,40 @@ function clearDisplay() {
 
  // ドラッグ可能にするJavaScriptコード
  const calculator = document.getElementById('calculator');
- const header = document.getElementById('calculator-header');
+const header = document.getElementById('calculator-header');
 
- let offsetX = 0;
- let offsetY = 0;
- let isDragging = false;
+let offsetX = 0;
+let offsetY = 0;
+let isDragging = false;
 
- header.addEventListener('mousedown', (e) => {
-     isDragging = true;
-     offsetX = e.clientX - calculator.offsetLeft;
-     offsetY = e.clientY - calculator.offsetTop;
- });
+// ドラッグ開始
+header.addEventListener('mousedown', (e) => {
+    isDragging = true;
 
- document.addEventListener('mousemove', (e) => {
-     if (isDragging) {
-         calculator.style.left = `${e.clientX - offsetX}px`;
-         calculator.style.top = `${e.clientY - offsetY}px`;
-     }
- });
+    const rect = calculator.getBoundingClientRect();
+    offsetX = e.clientX - rect.left;
+    offsetY = e.clientY - rect.top;
 
- document.addEventListener('mouseup', () => {
-     isDragging = false;
- });
+    header.style.cursor = "grabbing"; // 視覚的フィードバック
+});
+
+// ドラッグ中
+document.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+        // ウィンドウの範囲内に制限
+        const newLeft = Math.max(0, Math.min(window.innerWidth - calculator.offsetWidth, e.clientX - offsetX));
+        const newTop = Math.max(0, Math.min(window.innerHeight - calculator.offsetHeight, e.clientY - offsetY));
+
+        calculator.style.left = `${newLeft}px`;
+        calculator.style.top = `${newTop}px`;
+    }
+});
+
+// ドラッグ終了
+document.addEventListener('mouseup', () => {
+    isDragging = false;
+    header.style.cursor = "grab"; // 視覚的フィードバックを戻す
+});
+
+ 
  

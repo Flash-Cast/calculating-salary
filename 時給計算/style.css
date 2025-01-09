@@ -3,99 +3,113 @@
 
 /* ボディー */
 body {
-        background-color: #bcf2e8;
-               
-    header{
-        h1{color:black;
-            font-size: 35px;
-            text-align: center;
-        }
-    }
-    main{
-        h2{
-            font-size: 30px;
-            text-align: center;
-            color: black;
-        }
-        h3{
-            font-size: 20px;
-            text-align: center;
-            color: black;
-            font-weight: bold;
-        }
-        p{
-            font-size: 25px;
-            text-align: center;
-            color: black;
-            font-weight: bold;
-        }
-        .button{
-            display: inline-block;
-            font-weight: bold;
-            font-size: 20px;
-            width: 150px;
-            line-height: 60px;
-            text-align: center;
-            text-decoration: none;
-            color: black;
-            background-color: wheat;
-            box-shadow: 0px 5px 0px gray;
-            transition: .3s;
-            outline: black;
-            display: block;
-            margin: 0 auto;
-        }
-        .button:hover {
-            box-shadow: unset;
-            transform: translateY(4px);
-        }
-        #calculator {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            width: 220px;
-            padding: 10px;
-            background-color: #f4f4f4;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-            font-family: Arial, sans-serif;
-        }
-        
-        #display {
-            width: 200px;
-            height: 40px;
-            margin-bottom: 10px;
-            font-size: 18px;
-            text-align: right;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        
-        button {
-            width: 50px;
-            height: 40px;
-            margin: 5px;
-            font-size: 18px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        
-        button:hover {
-            background-color: #e6e6e6;
-        }
-        
-        button:active {
-            background-color: #d9d9d9;
-        }
-        
-        #result {
-            margin-top: 10px;
-            font-size: 16px;
-            color: #333;
-        }
-    }
+    background-color: #bcf2e8;
 }
+
+/* ヘッダーのスタイル */
+header h1 {
+    color: black;
+    font-size: 35px;
+    text-align: center;
+}
+
+/* メインコンテンツのスタイル */
+main h2 {
+    font-size: 30px;
+    text-align: center;
+    color: black;
+}
+
+main h3 {
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+main p {
+    font-size: 25px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+main #cal_button {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    width: 150px;
+    line-height: 60px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background-color: wheat;
+    box-shadow: 0px 5px 0px gray;
+    transition: .3s;
+    outline: black;
+    display: block;
+    margin: 0 auto;
+}
+
+main #cal_button:hover {
+    box-shadow: unset;
+    transform: translateY(4px);
+}
+
+/* 電卓のスタイル */
+#calculator {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 200px;
+    height: 430px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+#calculator-header {
+    background-color: #6289b2;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    cursor: grab;
+}
+
+#display {
+    width: 190px;
+    height: 40px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: right;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.element_button {
+    width: 50px;
+    height: 40px;
+    margin: 5px;
+    font-size: 18px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.element_button:hover {
+    background-color: #e6e6e6;
+}
+
+.element_button:active {
+    background-color: #d9d9d9;
+}
+
